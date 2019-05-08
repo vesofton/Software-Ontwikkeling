@@ -24,3 +24,12 @@ build:
   on_success:
     # Do something on success (e.g. generate doxygen file and push it to Git)
     - echo "Project build successful!!"
+
+
+integrations:
+  notifications:
+    - integrationName: email
+      type: email
+      on_success: never
+      on_failure: never
+      on_pull_request: never
