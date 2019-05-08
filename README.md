@@ -6,7 +6,7 @@ This project is a simple template that students can use for the assignment of th
 ## Build status
 | Branch  | Status                                                                                              |
 | ------- | --------------------------------------------------------------------------------------------------- |
-| Master  | [![Run Status](https://api.shippable.com/projects/5cc2cbdd9bbe6e00074197e5/badge?branch=master)]()  |
+| Master  | [![Run Status](https://api.shippable.com/projects/5cd2bb09b42e400007bd42c1/badge?branch=master)]()  |
 
 ## Getting Started ##
 
@@ -25,7 +25,7 @@ The following tools are required in order to build and run this project:
 
 Before building and running the software, this repository should be setup with GIT and Shippable.
 
-In order to flash and run this project locally, the following options can be used:
+In order to flash and run this project with Atollic, the following options should be used:
 * Option 1, Debug:
 
 Use the Debug button within Atollic to flash and debug the project on the ARM
