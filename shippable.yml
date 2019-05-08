@@ -1,0 +1,26 @@
+language: none
+
+
+env:
+  global:
+    # Setup environment variables
+    - SHIPPABLE: TRUE
+    - PROJECT_NAME: ARM_CORE
+
+
+build:
+  pre_ci_boot:
+    # Configure Docker image (this image has the GNU ARM Embedded Compiler and Doxygen installed)
+    image_name: henbro12/u14_gnu_arm_embedded
+    image_tag: latest
+    pull: true
+
+  ci:
+    # Build the project with the included Makefile
+    - arm-none-eabi-gcc --version
+    - arm-none-eabi-objcopy --version
+    - make all
+
+  on_success:
+    # Do something on success (e.g. generate doxygen file and push it to Git)
+    - echo "Project build successful!!"
