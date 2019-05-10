@@ -66,10 +66,12 @@ No tests are implemented yet.
 
 ## Authors ##
 
-**Henrico Brom**  (05-02-2019)
+**Henrico Brom**
 
 Third-year student Electrical Engineering at the Utrecht University of Applied Sciences  
-(Henrico.brom@student.hu.nl)
+
+Henrico.brom@student.hu.nl  
+05-02-2019  
 
 ## Acknowledgements ##
 * Franc van der Bent  (Teacher at Hogeschool Utrecht)

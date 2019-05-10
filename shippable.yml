@@ -11,14 +11,14 @@ env:
 build:
   pre_ci_boot:
     # Configure Docker image (this image has the GNU ARM Embedded Compiler and Doxygen installed)
-    image_name: henbro12/u14_gnu_arm_embedded
+    image_name: vesofton/u14_gnu_arm_embedded
     image_tag: latest
     pull: true
 
   ci:
     # Build the project with the included Makefile
-    - arm-none-eabi-gcc --version
-    - arm-none-eabi-objcopy --version
+    - arm-none-eabi-gcc --version                       # Used to compile the source code
+    - arm-none-eabi-objcopy --version                   # Used to generate .hex file from .elf file
     - make all
 
   on_success:
