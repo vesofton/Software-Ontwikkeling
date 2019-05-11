@@ -1,12 +1,19 @@
 language: none
 
+branches:
+  only:
+    - master
+    - doxygen
+
 
 env:
   global:
     # Setup environment variables
     - SHIPPABLE: TRUE
     - PROJECT_NAME: ARM_CORE
-    - DEPLOY_DIR: $SHIPPABLE_BUILD_DIR/../doxygen
+    - DEPLOY_DIR: $SHIPPABLE_BUILD_DIR/../doxygen_output
+    - DEPLOY_USERNAME: $ORG_NAME
+    - DEPLOY_REPONAME: $REPO_NAME
 
 
 build:

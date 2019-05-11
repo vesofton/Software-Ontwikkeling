@@ -11,7 +11,7 @@ git config user.name "shippable"
 git config user.email "user@shippable.com"
 
 
-BRANCH_EXIST=$(git ls-remote --heads git@github.com:vesofton/Software-Ontwikkeling.git doxygen_output | wc -l)
+BRANCH_EXIST=$(git ls-remote --heads git@github.com:$DEPLOY_USERNAME/$DEPLOY_REPONAME.git doxygen_output | wc -l)
 if [ $BRANCH_EXIST = 0 ]; then
         echo "Creating branch 'doxygen_output'"
         git checkout --orphan doxygen_output
@@ -29,5 +29,5 @@ git add .
 git commit -m "Deploy Doxygen files to GitHub [skip ci]"
 
 # In order to push to GitHub, the Deploymeny key must be set
-git push git@github.com:vesofton/Software-Ontwikkeling.git doxygen_output
+git push git@github.com:$DEPLOY_USERNAME/$DEPLOY_REPONAME.git doxygen_output
 
