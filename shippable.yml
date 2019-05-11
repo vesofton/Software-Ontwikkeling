@@ -6,7 +6,7 @@ env:
     # Setup environment variables
     - SHIPPABLE: TRUE
     - PROJECT_NAME: ARM_CORE
-    - DEPLOY_DIR: $SHIPPABLE_BUILD_DIR/../
+    - DEPLOY_DIR: $SHIPPABLE_BUILD_DIR/../doxygen
 
 
 build:
