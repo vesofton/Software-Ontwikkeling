@@ -23,6 +23,10 @@
 # 
 ################################################################################
 
+ifndef PROJECT_NAME
+	PROJECT_NAME = vesofton
+endif
+
 ifdef SHIPPABLE
 	CC = arm-none-eabi-gcc
 	OBJCOPY = arm-none-eabi-objcopy
