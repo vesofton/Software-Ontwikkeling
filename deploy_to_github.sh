@@ -16,6 +16,8 @@ if [ $BRANCH_EXIST = 0 ]; then
         echo "Creating branch 'doxygen_output'"
         git checkout --orphan doxygen_output
 	git clean -fdx
+else
+	git checkout doxygen_output
 fi
 
 rm -rf *
