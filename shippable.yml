@@ -6,6 +6,7 @@ env:
     # Setup environment variables
     - SHIPPABLE: TRUE
     - PROJECT_NAME: ARM_CORE
+    - DEPLOY_DIR: $SHIPPABLE_BUILD_DIR/../
 
 
 build:
@@ -29,6 +30,7 @@ build:
     - doxygen Doxyfile.doxy
     - echo "Push Doxygen files to GitHub"
     - cd $SHIPPABLE_BUILD_DIR
+    - cp -R output/. $DEPLOY_DIR
     - chmod +x deploy_to_github.sh
     - ./deploy_to_github.sh
 
