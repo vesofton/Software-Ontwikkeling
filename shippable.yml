@@ -22,10 +22,15 @@ build:
     - make all
 
   on_success:
-    # Generate Doxygen files
+    # Generate Doxygen files and push to github
     - echo "Project build successful!!"
+    - echo "Generate Doxygen files"
     - cd $SHIPPABLE_BUILD_DIR/docs
     - doxygen Doxyfile.doxy
+    - echo "Push Doxygen files to GitHub"
+    - cd $SHIPPABLE_BUILD_DIR
+    - chmod +x deploy_to_github.sh
+    - ./deploy_to_github.sh
 
 
 integrations:
