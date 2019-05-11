@@ -22,8 +22,10 @@ build:
     - make all
 
   on_success:
-    # Do something on success (e.g. generate doxygen file and push it to Git)
+    # Generate Doxygen files
     - echo "Project build successful!!"
+    - cd $SHIPPABLE_BUILD_DIR/docs
+    - doxygen Doxyfile.doxy
 
 
 integrations:

@@ -1,0 +1,8 @@
+/** @page softwaredesign_data Software Design Data layer
+ * @brief Software design for the data layer.
+ * 
+ * The software design of the data layer is shown in the image below.
+ * The software documented in this documentation is based on this software design.
+ * @image html "SoftwareDesign_DataLayer.svg"
+ * @image latex "SoftwareDesign_DataLayer.svg"
+ */
