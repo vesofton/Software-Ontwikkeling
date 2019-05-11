@@ -11,10 +11,10 @@ git config user.name "shippable"
 git config user.email "user@shippable.com"
 
 
-if [ "git ls-remote --heads git@github.com:vesofton/Software-Ontwikkeling.git doxygen_output | wc -l" = "0" ]; then
+if [ "git ls-remote --heads git@github.com:vesofton/Software-Ontwikkeling.git doxygen_output | wc -l" = "1" ]; then
 	git checkout -b doxygen_output
 	git push -u origin doxygen_output
-	rm -rf doxygen_output .
+	rm -rf *
 fi
 
 
