@@ -11,7 +11,8 @@ git config user.name "shippable"
 git config user.email "user@shippable.com"
 
 
-if [ "git ls-remote --heads git@github.com:vesofton/Software-Ontwikkeling.git doxygen_output | wc -l" = "0" ]; then
+echo "Test"
+if [ "git ls-remote --heads git@github.com:vesofton/Software-Ontwikkeling.git doxygen_output | wc -l" = "1" ]; then
 	echo "Creating branch 'doxygen_output'" 
 	git checkout -b doxygen_output
 	git push -u origin doxygen_output
