@@ -10,9 +10,10 @@
 // Function : VGA_core DMA LIB 320x240, 8bit color
 //--------------------------------------------------------------
 
-#include "main.h"
-#include "stm32_ub_vga_screen.h"
+#include "../inc/main.h"
+
 #include <math.h>
+#include "../../Libraries/Device/STM32F4xx/inc/stm32_ub_vga_screen.h"
 
 int main (void)
 {

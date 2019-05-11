@@ -259,7 +259,7 @@ typedef enum IRQn
   */
 
 #include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
-#include "system_stm32f4xx.h"
+#include "../inc/system_stm32f4xx.h"
 #include <stdint.h>
 
 /** @addtogroup Exported_types
@@ -7113,7 +7113,7 @@ typedef struct
   */ 
 
 #ifdef USE_STDPERIPH_DRIVER
-  #include "stm32f4xx_conf.h"
+  #include "../inc/stm32f4xx_conf.h"
 #endif /* USE_STDPERIPH_DRIVER */
 
 /** @addtogroup Exported_macro
