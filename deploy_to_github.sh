@@ -12,7 +12,7 @@ git config user.email "user@shippable.com"
 
 # You must commit with message containing '[skip ci]' to prevent
 # invoking another build (and creating an infinite loop)
-git commit output -m "[skip ci] Deploy Doxygen files to GitHub"
+git commit --output -m "Deploy Doxygen files to GitHub [skip ci]"
 
-# Use the key that Shippable uses to connect to GitHub
-ssh-agent bash -c "ssh-add ~/keys/id_${JOB_ID}; git push"
+# In order to push to GitHub, the Deploymeny key must be set
+git push git@github.com:vesofton/Software-Ontwikkeling.git doxygen
