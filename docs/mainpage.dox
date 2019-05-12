@@ -1,19 +1,13 @@
 /**
  * @mainpage
  * 
- * This is the VgaCore, representing the data layer.\n
- * The VgaCore interacts directly with the screenRAM to write and read pixels on a VGA screen.\n
- * The VgaCore has been developed for and can be used with an STM32F407VG microcontroller.
+ * This is an template that can be used for the Software Development class.
+ * Main information about the project should be documented here.
  * 
  * @section info Info
- * The logic- and presentation layer documentation can be accessed for further information.\n
- * Logic Layer: [ScreenCore Documentation](http://vidavidorra.com/SOFTON_VGA_API/ScreenCore/html/index.html)\n
- * Presentation Layer: [API reference Documentation](http://vidavidorra.com/SOFTON_VGA_API/Demo/html/index.html)\n
- * Repository: [GitHub](https://github.com/vidavidorra/SOFTON_VGA_API)
+ * The repository can be found at [GitHub](https://github.com/vesofton/Software-Ontwikkeling).
  * 
- * @author Jeroen de Bruijn
- * @author Jesse Garcia van Rooijen
- * @author Milad Safi
- * @version 1.0.0
- * @date May 26, 2016
+ * @author <Henrico Brom>
+ * @version <1.0.0>
+ * @date <May 12, 2019>
  */

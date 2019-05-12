@@ -27,6 +27,7 @@ fi
 # Remove all existing files and 
 # copy the newly genereted doxygen files into the current directory
 rm -rf *
+rm .gitignore
 cp -R $DEPLOY_DIR/. .
 
 
