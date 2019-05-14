@@ -28,7 +28,6 @@ fi
 # copy the newly genereted doxygen files into the current directory
 rm -rf *
 cp -R $DEPLOY_DIR/. .
-rm .gitignore
 
 
 # Track all modified files
