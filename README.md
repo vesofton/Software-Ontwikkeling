@@ -49,6 +49,12 @@ The project should now be configured to flash and run it.
 
 ![picture alt](http://thundertronics.com/wp-content/uploads/2018/07/flashandrun.png "Flash and Run configurations")
 
+## Shippable/Doxygen ##
+
+Shippable uses the script 'deploy_to_github.sh' in order to create a bew branch named 'doxygen_output' and  
+pushes the generated doxygen files to it. To make this work, the deployment key from shippable should be added  
+to the GitHub repository. This can be done in the profile settings under SSH and GPG keys.
+
 ## Building the project ###
 
 This repository cantains a Makefile which can compile and build the source code.

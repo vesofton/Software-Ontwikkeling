@@ -1,13 +1,12 @@
 /**
  * @mainpage
  * 
- * This is an template that can be used for the Software Development class.
- * Main information about the project should be documented here.
+ * This is a template that can be used for the Software Development class.
  * 
  * @section info Info
  * The repository can be found at [GitHub](https://github.com/vesofton/Software-Ontwikkeling).
  * 
- * @author <Henrico Brom>
- * @version <1.0.0>
- * @date <May 12, 2019>
+ * @author Henrico Brom
+ * @version 1.0.0
+ * @date May 12, 2019
  */
