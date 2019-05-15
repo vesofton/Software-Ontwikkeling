@@ -4,9 +4,9 @@
 This project is a simple template that students can use for the assignment of the Software Development course.
 
 ## Build status
-| Branch  | Status                                                                                              |
-| ------- | --------------------------------------------------------------------------------------------------- |
-| Master  | [![Run Status](https://api.shippable.com/projects/5cd2bb09b42e400007bd42c1/badge?branch=master)]()  |
+| Branch  | Status                                                                                                                                                                       |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Master  | [![Run Status](https://api.shippable.com/projects/5cd2bb09b42e400007bd42c1/badge?branch=master)](https://app.shippable.com/github/vesofton/Software-Ontwikkeling/dashboard)  |
 
 ## Getting Started ##
 
