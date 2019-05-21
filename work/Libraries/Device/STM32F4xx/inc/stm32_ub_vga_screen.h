@@ -15,7 +15,7 @@
 #include "stm32f4xx_tim.h"
 #include "misc.h"
 #include "stm32f4xx_dma.h"
-#include "../inc/stm32f4xx.h"
+#include "stm32f4xx.h"
 
 
 
