@@ -1,9 +1,9 @@
 //--------------------------------------------------------------
 // File     : main.c
-// Datum    : 30.03.2016
+// Datum    : 01.06.2019
 // Version  : 1.0
 // Autor    : UB
-// mods by  : J.F. van der Bent
+// mods by  : J.F. van der Bent, Henrico Brom
 // CPU      : STM32F4
 // IDE      : CooCox CoIDE 1.7.x
 // Module   : CMSIS_BOOT, M4_CMSIS_CORE
