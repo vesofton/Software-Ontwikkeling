@@ -19,7 +19,7 @@ int main (void)
     SystemInit(); // System speed to 168MHz
 
     UB_VGA_Screen_Init(); // Init VGA-Screen
-    UB_VGA_FillScreen(VGA_COL_CYAN);
+    UB_VGA_FillScreen(VGA_COL_BLACK);
     UB_VGA_SetPixel(10,10,10);
 
     draw_line(400, 600, 500, 200, 2, 8, 0);			// (x1, y1, x2, y2, color, weight, <reserved>)

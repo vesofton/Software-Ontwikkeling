@@ -28,6 +28,8 @@
 								<option id="gnu.c.compiler.option.include.paths.1352828043" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Source/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Source/src}&quot;"/>
+									<listOptionValue builtIn="false" value="../Stubs/inc"/>
+									<listOptionValue builtIn="false" value="../Stubs/src"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1212789405" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
@@ -40,6 +42,8 @@
 									<listOptionValue builtIn="false" value="&quot;${PWD}\..\..\googletestlib\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Source/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Source/src}&quot;"/>
+									<listOptionValue builtIn="false" value="../Stubs/src"/>
+									<listOptionValue builtIn="false" value="../Stubs/inc"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1943368268" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -59,8 +63,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Source|UnitTests" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+						<entry excluding="Stubs|Source|UnitTests" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
 						<entry excluding="src/main" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Source"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Stubs"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="UnitTests"/>
 					</sourceEntries>
 				</configuration>
@@ -92,6 +97,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Libraries/CMSIS/Include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Libraries/Device/STM32F4xx/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Libraries/STM32F4xx_StdPeriph_Driver/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="../Stubs"/>
+									<listOptionValue builtIn="false" value="../Stubs/src"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.119867166" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -107,6 +114,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Libraries/CMSIS/Include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Libraries/Device/STM32F4xx/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Libraries/STM32F4xx_StdPeriph_Driver/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="../Stubs"/>
+									<listOptionValue builtIn="false" value="../Stubs/src"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1850761048" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
@@ -122,6 +131,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Libraries/CMSIS/Include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Libraries/Device/STM32F4xx/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Qualification/Libraries/STM32F4xx_StdPeriph_Driver/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="../Stubs"/>
+									<listOptionValue builtIn="false" value="../Stubs/src"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.10372795" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>

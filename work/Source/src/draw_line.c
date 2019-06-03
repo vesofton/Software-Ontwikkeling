@@ -11,9 +11,10 @@
 
 #include "draw_figures.h"
 
+
 int draw_line(int x1, int y1, int x2, int y2, int color, int weight, int reserverd)
 {
-	if ((x2 < x1) || (y2 > y1))
+	if ((x2 < x1) || (y2 < y1) || (color > 255) || (weight > 10))
 		return 1;
 
 	int dx = x2 -x1;

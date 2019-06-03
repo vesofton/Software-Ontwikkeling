@@ -14,7 +14,7 @@
 
 int draw_rectangle(int x, int y, int width, int height, int color, int style, int reserved, int reserved1)
 {
-	if ((style > 1) || (reserved > 10))
+	if ((color > 255) || (style > 1) || (reserved > 10))
 		return 1;
 
 	int filled = style;

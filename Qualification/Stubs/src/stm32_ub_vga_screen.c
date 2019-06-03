@@ -1,20 +1,17 @@
 //--------------------------------------------------------------
-// File     : main.cpp
+// File     : stm32_ub_vga_screen.c
 // Datum    : 03.06.2019
 // Version  : 1.0
 // Autor    : Henrico Brom
 // CPU      : STM32F4
 // IDE      : Atollic Truestudio stm32 9.3
 // Module   : CMSIS_BOOT, M4_CMSIS_CORE
-// Function : Initialize googletest framework and run all tests
+// Function : Stub file for the ub_vga_screen functions
 //--------------------------------------------------------------
 
-#include <iostream>
-using namespace std;
+#include "stm32_ub_vga_screen.h"
 
-#include "gtest/gtest.h"
-
-int main(int argc, char **argv) {
-	::testing::InitGoogleTest(&argc, argv);
-	return RUN_ALL_TESTS();
+void UB_VGA_SetPixel(uint16_t xp, uint16_t yp, uint8_t color)
+{
+	// Do nothing when this function is called (void)
 }
