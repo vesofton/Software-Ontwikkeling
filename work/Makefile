@@ -38,13 +38,12 @@ else
 	SHELL=cmd
  	CC = arm-atollic-eabi-gcc
  	OBJCOPY = arm-atollic-eabi-objcopy
- 	PROJECT_NAME = ARM_CORE
 endif
 
 RM=rm -rf
 
 # Assembler, Compiler and Linker flags and linker script settings
-LINKER_FLAGS=-lm -mthumb -mhard-float -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -Wl,--gc-sections -T$(LINK_SCRIPT) -static  -Wl,--start-group -lc -lm -Wl,--end-group  -specs=nosys.specs  -Wl,-cref "-Wl,-Map=$(BIN_DIR)/ARM_CORE.map" -Wl,--defsym=malloc_getpagesize_P=0x1000
+LINKER_FLAGS=-lm -mthumb -mhard-float -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -Wl,--gc-sections -T$(LINK_SCRIPT) -static  -Wl,--start-group -lc -lm -Wl,--end-group  -specs=nosys.specs  -Wl,-cref "-Wl,-Map=$(BIN_DIR)/vesofton.map" -Wl,--defsym=malloc_getpagesize_P=0x1000
 LINK_SCRIPT="stm32f4_flash.ld"
 ASSEMBLER_FLAGS=-c -g -O0 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mthumb -mhard-float  -D"STM32F4XX" -D"STM32F40XX" -D"USE_STDPERIPH_DRIVER"  -x assembler-with-cpp  -Isrc -ILibraries/CMSIS/Include -ILibraries/Device/STM32F4xx/inc -ILibraries/STM32F4xx_StdPeriph_Driver/inc -ISource/inc
 COMPILER_FLAGS=-c -g -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -O0 -Wall -ffunction-sections -fdata-sections -mthumb -mhard-float  -D"STM32F4XX" -D"STM32F40XX" -D"USE_STDPERIPH_DRIVER"   -Isrc -ILibraries/CMSIS/Include -ILibraries/Device/STM32F4xx/inc -ILibraries/STM32F4xx_StdPeriph_Driver/inc -ISource/inc 
@@ -76,15 +75,18 @@ OBJS := $(OBJS:%.S=$(OBJECT_DIR)/%.o)
 # Build project
 # Major targets
 ###############
-all: buildelf
+all: buildelf buildlib
 
 buildelf: $(OBJS) 
 	$(CC) -o "$(BIN_DIR)/$(PROJECT_NAME).elf" $(OBJS) $(LINKER_FLAGS)
 	$(OBJCOPY) -O ihex "$(BIN_DIR)/$(PROJECT_NAME).elf" "$(BIN_DIR)/$(PROJECT_NAME).hex"
 
+buildlib: $(OBJS)
+	ar -rv -o $(OBJECT_DIR)/$(PROJECT_NAME).a $^
+	
 
 clean:
-	$(RM) $(OBJS) "$(BIN_DIR)/$(PROJECT_NAME).elf" "$(BIN_DIR)/$(PROJECT_NAME).hex" "$(BIN_DIR)/$(PROJECT_NAME).map"
+	$(RM) $(OBJS) "$(BIN_DIR)/$(PROJECT_NAME).elf" "$(BIN_DIR)/$(PROJECT_NAME).hex" "$(BIN_DIR)/$(PROJECT_NAME).map" "$(BIN_DIR)/$(PROJECT_NAME).a"
 
 
 ##################
