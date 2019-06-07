@@ -22,7 +22,7 @@ int draw_rectangle(int x, int y, int width, int height, int color, int style, in
 
 	if (filled)
 	{
-		int xi, xy;
+		int xi, yi;
 		for (xi = x; xi < width; xi++)
 		{
 			for (yi = y; yi < height; yi++)
