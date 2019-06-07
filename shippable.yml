@@ -3,6 +3,7 @@ language: none
 branches:
   only:
     - master
+    - google_test
 
 
 env:

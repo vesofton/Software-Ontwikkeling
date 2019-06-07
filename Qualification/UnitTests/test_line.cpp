@@ -14,7 +14,6 @@
 #include "stm32_ub_vga_screen.c"
 #include "draw_line.c"
 
-
 TEST (Line, draw)
 {
 	int error = 0;
