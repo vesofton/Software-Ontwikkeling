@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include UnitTests/subdir.mk
 -include Stubs/src/subdir.mk
+-include Source/src/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -39,12 +40,14 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: Qualification.exe
-
+all: Qualification.exe linux
 
 # Tool invocations
 Qualification.exe: $(OBJS) $(USER_OBJS)
-	g++ -static -L"C:\Users\henrico\Documents\vesofton\Software-Ontwikkeling\Qualification\Debug\..\..\work\Debug" -L"C:\Users\henrico\Documents\vesofton\Software-Ontwikkeling\Qualification\Debug\..\..\googletestlib\make" -o "Qualification.exe" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -static -L"C:\Users\henrico\Documents\vesofton\Software-Ontwikkeling\Qualification\Debug\..\..\googletestlib\make" -o "Qualification.exe" $(OBJS) $(USER_OBJS) $(LIBS)
+
+linux: $(OBJS) $(USER_OBJS)
+	
 
 # Other Targets
 clean:
