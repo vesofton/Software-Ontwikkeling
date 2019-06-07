@@ -22,9 +22,10 @@ int draw_rectangle(int x, int y, int width, int height, int color, int style, in
 
 	if (filled)
 	{
-		for (int xi = x; xi < width; xi++)
+		int xi, xy;
+		for (xi = x; xi < width; xi++)
 		{
-			for (int yi = y; yi < height; yi++)
+			for (yi = y; yi < height; yi++)
 			{
 				UB_VGA_SetPixel(xi, yi, color);
 			}

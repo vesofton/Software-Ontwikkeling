@@ -27,11 +27,12 @@ int draw_line(int x1, int y1, int x2, int y2, int color, int weight, int reserve
 
 	float x = x1;
 	float y = y1;
-	for (int i = 0; i < steps; i++)
+	int i, xw, yw;
+	for (i = 0; i < steps; i++)
 	{
-		for (int xw = 0; xw < weight; xw++)
+		for (xw = 0; xw < weight; xw++)
 		{
-			for (int yw = 0; yw < weight; yw++)
+			for (yw = 0; yw < weight; yw++)
 			{
 				UB_VGA_SetPixel(x + xw, y + yw, color);
 			}
