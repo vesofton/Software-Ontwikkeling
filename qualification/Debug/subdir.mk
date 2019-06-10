@@ -15,5 +15,5 @@ CPP_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 %.o: ../%.cpp
-	g++ -I"C:\Users\henrico\Documents\vesofton\Software-Ontwikkeling\qualification\Debug\..\..\googletestlib\include" -I"C:\Users\henrico\Documents\vesofton\Software-Ontwikkeling\work\Source\inc" -I"C:\Users\henrico\Documents\vesofton\Software-Ontwikkeling\work\Source\src" -I../Stubs/src -I../Stubs/inc -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -D_GLIBCXX_USE_CXX11_ABI=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	g++ -I"..\..\googletestlib\include" -I"..\..\work\Source\inc" -I"..\..\work\Source\src" -I../Stubs/src -I../Stubs/inc -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -D_GLIBCXX_USE_CXX11_ABI=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 
