@@ -2,6 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
+ELF_SRCS := 
 C_UPPER_SRCS := 
 CXX_SRCS := 
 C++_SRCS := 
@@ -15,6 +16,7 @@ O_SRCS :=
 CC_DEPS := 
 C++_DEPS := 
 EXECUTABLES := 
+SECOUTPUTBUILDVAR := 
 OBJS := 
 C_UPPER_DEPS := 
 CXX_DEPS := 

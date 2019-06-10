@@ -78,10 +78,12 @@ OBJS := $(OBJS:%.S=$(OBJECT_DIR)/%.o)
 # Build project
 # Major targets
 ###############
-all: buildelf buildlib
+all: buildelf buildhex buildlib
 
 buildelf: $(OBJS) 
 	$(CC) -o "$(BIN_DIR)/$(PROJECT_NAME).elf" $(OBJS) $(LINKER_FLAGS)
+	
+buildhex: $(OBJS)	
 	$(OBJCOPY) -O ihex "$(BIN_DIR)/$(PROJECT_NAME).elf" "$(BIN_DIR)/$(PROJECT_NAME).hex"
 
 buildlib: $(OBJS)

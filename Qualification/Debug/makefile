@@ -38,20 +38,23 @@ endif
 -include ../makefile.defs
 
 # Add inputs and outputs from these tool invocations to the build variables 
+SECOUTPUTBUILDVAR += \
+EXECUTABLES \
+
 
 # All Target
-all: Qualification.exe linux
+all: Qualification.exe
 
 # Tool invocations
 Qualification.exe: $(OBJS) $(USER_OBJS)
 	g++ -static -L"C:\Users\henrico\Documents\vesofton\Software-Ontwikkeling\Qualification\Debug\..\..\googletestlib\make" -o "Qualification.exe" $(OBJS) $(USER_OBJS) $(LIBS)
 
-linux: $(OBJS) $(USER_OBJS)
-	
+EXECUTABLES: Qualification.exe $(EXECUTABLES)
+	"C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java" -jar "C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar" sizeinfo list Qualification.exe
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(C_DEPS)$(CPP_DEPS) Qualification.exe
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(SECOUTPUTBUILDVAR)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(C_DEPS)$(CPP_DEPS) Qualification.exe
 	-@echo ' '
 
 .PHONY: all clean dependents
