@@ -28,9 +28,6 @@ build:
     - arm-none-eabi-gcc --version                       # Used to compile the source code
     - arm-none-eabi-objcopy --version                   # Used to generate .hex file from .elf file
     - make all
-    - cd $SHIPPABLE_BUILD_DIR/Qualification/Debug
-    - chmod +x Qualification.exe
-    - ./Qualification.exe
 
   on_success:
     # Generate Doxygen files and push to github
