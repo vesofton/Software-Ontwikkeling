@@ -47,7 +47,7 @@ all: Qualification.exe
 
 # Tool invocations
 Qualification.exe: $(OBJS) $(USER_OBJS)
-	g++ -static -L"..\..\googletestlib\make" -o "Qualification.exe" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -static -L"../../googletestlib/make" -o "Qualification.exe" $(OBJS) $(USER_OBJS) $(LIBS)
 
 # Other Targets
 clean:

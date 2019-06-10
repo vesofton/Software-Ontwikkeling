@@ -4,16 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../main.cpp 
+../UnitTests/test_line.cpp \
+../UnitTests/test_rectangle.cpp 
 
 OBJS += \
-./main.o 
+./UnitTests/test_line.o \
+./UnitTests/test_rectangle.o 
 
 CPP_DEPS += \
-./main.d 
+./UnitTests/test_line.d \
+./UnitTests/test_rectangle.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-%.o: ../%.cpp
+UnitTests/%.o: ../UnitTests/%.cpp
 	g++ -I"../../googletestlib/include" -I"../../work/Source/inc" -I"../../work/Source/src" -I../Stubs/src -I../Stubs/inc -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -D_GLIBCXX_USE_CXX11_ABI=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 

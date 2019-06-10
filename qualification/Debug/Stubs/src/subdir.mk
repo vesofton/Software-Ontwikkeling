@@ -3,17 +3,17 @@
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
-CPP_SRCS += \
-../main.cpp 
+C_SRCS += \
+../Stubs/src/stm32_ub_vga_screen.c 
 
 OBJS += \
-./main.o 
+./Stubs/src/stm32_ub_vga_screen.o 
 
-CPP_DEPS += \
-./main.d 
+C_DEPS += \
+./Stubs/src/stm32_ub_vga_screen.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-%.o: ../%.cpp
-	g++ -I"../../googletestlib/include" -I"../../work/Source/inc" -I"../../work/Source/src" -I../Stubs/src -I../Stubs/inc -O0 -g3 -Wall -c -fmessage-length=0 -std=gnu++11 -D_GLIBCXX_USE_CXX11_ABI=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+Stubs/src/%.o: ../Stubs/src/%.c
+	gcc -I"../../work/Source/inc" -I"../../work/Source/src" -I../Stubs/inc -I../Stubs/src -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 
