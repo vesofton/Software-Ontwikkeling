@@ -47,7 +47,10 @@ all: Qualification.exe
 
 # Tool invocations
 Qualification.exe: $(OBJS) $(USER_OBJS)
-	g++ -static -L"../../googletestlib/make" -o "Qualification.exe" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -static -L"C:\Users\henrico\Documents\vesofton\Software-Ontwikkeling\qualification\Debug\..\..\googletestlib\make" -o "Qualification.exe" $(OBJS) $(USER_OBJS) $(LIBS)
+
+EXECUTABLES: Qualification.exe $(EXECUTABLES)
+	"C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java" -jar "C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar" sizeinfo list Qualification.exe
 
 # Other Targets
 clean:
