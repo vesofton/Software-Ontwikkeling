@@ -44,14 +44,6 @@ TEST (Line, error)
 {
 	int error = 0;
 
-	// Test delta x (x1 >= x2)
-	error = draw_line(1000, 0, 500, 0, 0, 0, 0);
-	EXPECT_NE(0, error);
-
-	// Test delta y (y1 >= y2)
-	error = draw_line(0, 1000, 0, 500, 0, 0, 0);
-	EXPECT_NE(0, error);
-
 	// Test color argument
 	error = draw_line(0, 0, 0, 0, 256, 0, 0);
 	EXPECT_NE(0, error);

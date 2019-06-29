@@ -13,9 +13,9 @@
 #include "stm32_ub_vga_screen.h"
 
 
-int draw_line(int x1, int y1, int x2, int y2, int color, int weight, int reserverd)
+int draw_line(int x1, int y1, int x2, int y2, int color, int weight, int reserved)
 {
-	if ((color > 255) || (style > 1) || (reserved > 10))
+	if ((color > 255) || (weight > 10))
 		return 1;
 
 	int dx= x2 - x1;
