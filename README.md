@@ -25,7 +25,7 @@ The following tools are required in order to build and run this project:
 
 Before building and running the software, this repository should be setup with GIT and Shippable.
 
-In order to flash and run this project with Atollic, the following options should be used:
+In order to flash and run this project with Atollic, the following options can be used:
 * Option 1, Debug:
 
 Use the Debug button within Atollic to flash and debug the project on the ARM
@@ -51,24 +51,34 @@ The project should now be configured to flash and run it.
 
 ## Shippable/Doxygen ##
 
-Shippable uses the script 'deploy_to_github.sh' in order to create a bew branch named 'doxygen_output' and  
+Shippable uses the script 'deploy_to_github.sh' in order to create a new branch named 'doxygen_output' and  
 pushes the generated doxygen files to it. To make this work, the deployment key from shippable should be added  
 to the GitHub repository. This can be done in the profile settings under SSH and GPG keys.
 
 ## Building the project ###
 
 This repository cantains a Makefile which can compile and build the source code.
-To use this Makefile, the following commands should be used:
+To use this Makefile, the following commands can be used in a terminal:
 ```
 * make       - Displays help dialog
-* make clean - Removes all generated files
-* make build - Builds the source code
-* make all   - Executes 'make clean' and 'make build' respectively
+* make all   - Run 'make clean', 'make build_work' and 'make build_qualification' respectively
+* make clean - Run 'make clean_work' and 'make clean_qualification' respectively
+* make build_work - Compile the source code for the 'work' project
+* make clean_work - Clean the source code for the 'work' project
+* make build_qualification - Compile the source code for the 'qualification' project
+* make clean_qualification - Clean the source code for the 'qualification' project
 ```
 
 ## Running the tests ##
 
-No tests are implemented yet.
+A few sample unit tests are implemented in the 'Qualification' project. This project is linked to the 'work' project and 
+can test the function that are defined in the 'work' project. To run the test execute the executable found in the 
+'/Qualification/Debug/' directory or enter the following command in a terminal:
+```
+* ./qualification/Debug/Qualification.exe
+```
+
+
 
 ## Authors ##
 
