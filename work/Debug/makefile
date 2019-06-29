@@ -31,19 +31,19 @@ EXECUTABLES \
 
 
 # All Target
-all: ARM_CORE secondary-outputs
+all: vesofton secondary-outputs
 
 # Tool invocations
 	@echo 'No tool found that can build the extension specified with the build artifact name $@'
 USER_OBJS.elf: $(OBJS) $(USER_OBJS)
-	arm-atollic-eabi-gcc -o "USER_OBJS.elf" $(OBJS) $(USER_OBJS) $(LIBS) -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"../stm32f4_flash.ld" -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler "-Wl,-Map=ARM_CORE.map" -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-atollic-eabi-gcc -o "USER_OBJS.elf" $(OBJS) $(USER_OBJS) $(LIBS) -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"../stm32f4_flash.ld" -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler "-Wl,-Map=vesofton.map" -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group
 
-EXECUTABLES: ARM_CORE $(EXECUTABLES)
-	"C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java" -jar "C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar" sizeinfo list ARM_CORE
+EXECUTABLES: vesofton $(EXECUTABLES)
+	"C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\jre\bin\java" -jar "C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\Tools\arm-atollic-reports.jar" sizeinfo list vesofton
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(SECOUTPUTBUILDVAR)$(OBJS)$(C_DEPS) ARM_CORE
+	-$(RM) $(EXECUTABLES)$(SECOUTPUTBUILDVAR)$(OBJS)$(C_DEPS) vesofton
 	-@echo ' '
 
 secondary-outputs: $(SECOUTPUTBUILDVAR)

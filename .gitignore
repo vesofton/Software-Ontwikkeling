@@ -1,6 +1,6 @@
 
 # Untrack generated objective files
-work/Debug/**/*.o
+*.o
 *.elf
 *.hex
 *.map

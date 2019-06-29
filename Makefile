@@ -3,17 +3,29 @@
 
 
 help:
-	@echo -e "To use this Makefile, the following commands should be used:\
-	\n\tmake clean: Remove all generated files while building\
-	\n\tmake build: Compile and build source code\
-	\n\tmake all  : Execute 'make clean' and 'make build' respectively"
+	@echo -e "\nTo use this Makefile, the following commands should be used:\n\
+	\n\tmake all  : Run 'make clean', 'make build_work' and 'make build_qualification' respectively\
+	\n\tmake clean: Run 'make clean_work' and ' make clean_qualification' respectively\n\
+	\n\tmake build_work: Compile the source code for the work project\
+	\n\tmake clean_work: Clean the source code for the work project\n\
+	\n\tmake buikd_qualification: Compile the source code for the qualification project\
+	\n\tmake clean_qualification: Clean the source code for the qualification project"
 
 
-all: clean build
+all: clean build_work build_qualification
+
+clean: clean_work clean_qualification
 
 
-clean:
+build_work:
+	cd work && make all
+
+clean_work:
 	cd work && make clean
 
-build:
-	cd work && make all
+
+build_qualification:
+	cd qualification/Debug && make all
+
+clean_qualification:
+	cd qualification/Debug && make clean

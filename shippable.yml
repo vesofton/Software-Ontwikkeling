@@ -26,7 +26,8 @@ build:
     # Build the project with the included Makefile
     - arm-none-eabi-gcc --version                       # Used to compile the source code
     - arm-none-eabi-objcopy --version                   # Used to generate .hex file from .elf file
-    - make all
+    - make clean_work
+    - make build_work
 
   on_success:
     # Generate Doxygen files and push to github
