@@ -47,7 +47,7 @@ Install [STSW-LINK004](https://www.st.com/en/development-tools/stsw-link004.html
 ```
 The project should now be configured to flash and run it.
 
-![picture alt](http://thundertronics.com/wp-content/uploads/2018/07/flashandrun.png "Flash and Run configurations")
+![picture alt](https://github.com/vesofton/Software-Ontwikkeling/blob/master/Atollic%20Run%20Instructions.png "Flash and Run configurations")
 
 ## Shippable/Doxygen ##
 
