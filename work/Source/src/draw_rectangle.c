@@ -1,17 +1,30 @@
-//--------------------------------------------------------------
-// File     : draw_rectangle.c
-// Datum    : 03.06.2019
-// Version  : 1.0
-// Autor    : Henrico Brom
-// CPU      : STM32F4
-// IDE      : Atollic Truestudio stm32 9.3
-// Module   : CMSIS_BOOT, M4_CMSIS_CORE
-// Function : Draw a rectangle on the VGA screen
-//--------------------------------------------------------------
+/**
+ * @file draw_line.c
+ * @date 03-06-2019
+ * @author Henrico Brom
+ * @version 1.0
+ * @cpu STM32F4
+ * @ide Atollic Truestudio stm32 9.3
+ * @module CMSIS_BOOT, M4_CMSIS_CORE
+ * @brief This file contains an example function to draw a rectangle on the VGA screen.
+ */
+
 
 #include "draw_figures.h"
 
-
+/**
+* This method will be used to draw a rectangle on the VGA screen
+* @author Henrico Brom
+* @param x 			Top left corner x-axis
+* @param y 			Top left corner y-axis
+* @param width 		Width of the rectangle
+* @param height 	Height of the rectangle
+* @param color 		Color of the line (0-255)
+* @param style 		Filled or not (0-1)
+* @param reserved 	Extra options (not implemented)
+* @param reserved1 	Extra options (not implemented)
+* @date 16-06-2019
+*/
 int draw_rectangle(int x, int y, int width, int height, int color, int style, int reserved, int reserved1)
 {
 	if ((color > 255) || (style > 1) || (reserved > 10))

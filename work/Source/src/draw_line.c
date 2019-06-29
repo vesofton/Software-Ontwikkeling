@@ -1,18 +1,29 @@
-//--------------------------------------------------------------
-// File     : draw_line.c
-// Datum    : 03.06.2019
-// Version  : 1.0
-// Autor    : Henrico Brom
-// CPU      : STM32F4
-// IDE      : Atollic Truestudio stm32 9.3
-// Module   : CMSIS_BOOT, M4_CMSIS_CORE
-// Function : Draw a line on the VGA screen
-//--------------------------------------------------------------
+/**
+ * @file draw_line.c
+ * @date 03-06-2019
+ * @author Henrico Brom
+ * @version 1.0
+ * @cpu STM32F4
+ * @ide Atollic Truestudio stm32 9.3
+ * @module CMSIS_BOOT, M4_CMSIS_CORE
+ * @brief This file contains an example function to draw a line on the VGA screen.
+ */
 
 #include "draw_figures.h"
 #include "stm32_ub_vga_screen.h"
 
-
+/**
+* This method will be used to draw a line on the VGA screen
+* @author Henrico Brom
+* @param x1 		First point on x-axis
+* @param y1 		First point on y-axis
+* @param x2 		Second point on x-axis
+* @param y2 		Second point on y-axis
+* @param color 		Color of the line (0-255)
+* @param weight 	Weight of the line (0-10)
+* @param reserved 	Extra options (not implemented)
+* @date 12-06-2019
+*/
 int draw_line(int x1, int y1, int x2, int y2, int color, int weight, int reserved)
 {
 	if ((color > 255) || (weight > 10))

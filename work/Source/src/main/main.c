@@ -2,7 +2,7 @@
 // File     : main.c
 // Datum    : 01.06.2019
 // Version  : 1.0
-// Autor    : UB
+// Author    : UB
 // mods by  : J.F. van der Bent, Henrico Brom
 // CPU      : STM32F4
 // IDE      : Atollic Truestudio stm32 9.3
