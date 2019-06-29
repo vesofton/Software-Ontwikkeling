@@ -1,11 +1,7 @@
 /**
- * @file draw_line.c
+ * @file draw_rectangle.c
  * @date 03-06-2019
  * @author Henrico Brom
- * @version 1.0
- * @cpu STM32F4
- * @ide Atollic Truestudio stm32 9.3
- * @module CMSIS_BOOT, M4_CMSIS_CORE
  * @brief This file contains an example function to draw a rectangle on the VGA screen.
  */
 

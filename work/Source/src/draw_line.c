@@ -3,9 +3,6 @@
  * @date 03-06-2019
  * @author Henrico Brom
  * @version 1.0
- * @cpu STM32F4
- * @ide Atollic Truestudio stm32 9.3
- * @module CMSIS_BOOT, M4_CMSIS_CORE
  * @brief This file contains an example function to draw a line on the VGA screen.
  */
 
