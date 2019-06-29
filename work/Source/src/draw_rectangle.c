@@ -17,26 +17,12 @@ int draw_rectangle(int x, int y, int width, int height, int color, int style, in
 	if ((color > 255) || (style > 1) || (reserved > 10))
 		return 1;
 
-	int filled = style;
 	int weight = reserved;
 
-	if (filled)
-	{
-		int xi, yi;
-		for (xi = x; xi < width; xi++)
-		{
-			for (yi = y; yi < height; yi++)
-			{
-				UB_VGA_SetPixel(xi, yi, color);
-			}
-		}
-	} else
-	{
-		draw_line(x, y, x + width, y, color, weight, 0);					// Top
-		draw_line(x, y, x, y + height, color, weight, 0);					// Left
-		draw_line(x, y + height, x + width, y + height, color, weight, 0);	// Bottom
-		draw_line(x + width, y, x + width, y + height, color, weight, 0);	// Right
-	}
+	draw_line(x, y, x + width, y, color, weight, 0);					// Top
+	draw_line(x, y, x, y + height, color, weight, 0);					// Left
+	draw_line(x, y + height, x + width, y + height, color, weight, 0);	// Bottom
+	draw_line(x + width, y, x + width, y + height, color, weight, 0);	// Right
 
 	return 0;
 }

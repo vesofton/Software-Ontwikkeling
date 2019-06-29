@@ -10,35 +10,46 @@
 //--------------------------------------------------------------
 
 #include "draw_figures.h"
+#include "stm32_ub_vga_screen.h"
 
 
 int draw_line(int x1, int y1, int x2, int y2, int color, int weight, int reserverd)
 {
-	if ((x2 < x1) || (y2 < y1) || (color > 255) || (weight > 10))
+	if ((color > 255) || (style > 1) || (reserved > 10))
 		return 1;
 
-	int dx = x2 -x1;
+	int dx= x2 - x1;
 	int dy = y2 - y1;
 
-	int steps = abs(dx) > abs(dy) ? abs(dx) : abs(dy);
+	int right = dx > 0;
+	if (!right) dx = -dx;
 
-	float xIncrement = dx / (float) steps;
-	float yIncrement = dy / (float) steps;
+	int down = dy > 0;
+	if (down) dy = -dy;
 
-	float x = x1;
-	float y = y1;
-	int i, xw, yw;
-	for (i = 0; i < steps; i++)
+	int err = dx + dy;
+	int x = x1;
+	int y = y1;
+
+	for (;;)
 	{
-		for (xw = 0; xw < weight; xw++)
+		UB_VGA_SetPixel(x, y, color);
+		if (x == x2 && y == y2) break;
+
+		int e2 = err << 1;
+		if (e2 > dy)
 		{
-			for (yw = 0; yw < weight; yw++)
-			{
-				UB_VGA_SetPixel(x + xw, y + yw, color);
-			}
+			err += dy;
+			if (right) x++;
+			else x--;
 		}
-		x += xIncrement;
-		y += yIncrement;
+
+		if (e2 < dx)
+		{
+			err += dx;
+			if (down) y++;
+			else y--;
+		}
 	}
 
 	return 0;

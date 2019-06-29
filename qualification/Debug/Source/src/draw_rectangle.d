@@ -1,6 +1,8 @@
-Source/src/draw_rectangle.o: ../../work/Source/src/draw_rectangle.c \
- ../../work/Source/inc/draw_figures.h ../Stubs/inc/stm32_ub_vga_screen.h
+Source/src/draw_rectangle.o: \
+ C:/Users/henrico/Documents/vesofton/Software-Ontwikkeling/work/Source/src/draw_rectangle.c \
+ C:\Users\henrico\Documents\vesofton\Software-Ontwikkeling\work\Source\inc/draw_figures.h \
+ ../Stubs/inc/stm32_ub_vga_screen.h
 
-../../work/Source/inc/draw_figures.h:
+C:\Users\henrico\Documents\vesofton\Software-Ontwikkeling\work\Source\inc/draw_figures.h:
 
 ../Stubs/inc/stm32_ub_vga_screen.h:
